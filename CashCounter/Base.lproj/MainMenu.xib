@@ -22,22 +22,16 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="eta-3G-QdL">
             <items>
-                <menuItem title="Start" id="ChX-HG-1pQ">
+                <menuItem title="Start/Stop" id="ChX-HG-1pQ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="start:" target="Voe-Tx-rLC" id="mjr-N8-sjp"/>
+                        <action selector="start_stop:" target="Voe-Tx-rLC" id="Qjn-4T-H53"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Pause" id="8Or-bI-sVS">
+                <menuItem title="Reset" id="cuF-h5-bg4">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="pause:" target="Voe-Tx-rLC" id="nnU-Uh-fVn"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Stop" id="aqy-Ka-hqp">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="stop:" target="Voe-Tx-rLC" id="cIt-SJ-Kzj"/>
+                        <action selector="reset:" target="Voe-Tx-rLC" id="h7P-xY-fJT"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Hourly Pay" id="B4j-HW-d2P">

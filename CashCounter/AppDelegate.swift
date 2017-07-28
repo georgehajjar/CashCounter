@@ -17,24 +17,38 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var ones_sec = 0
     var tens_sec = 0
-    var ones_min = 0
-    var tens_min = 0
+    var ones_min = 9
+    var tens_min = 5
     var ones_hour = 0
     var tens_hour = 0
     var timer = Timer()
+    var count = 0
     
-    @IBAction func start(_ sender: NSMenuItem) {
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AppDelegate.tick), userInfo: nil, repeats: true) // Run tick() once a second
-    }
-    
-    @IBAction func pause(_ sender: NSMenuItem) {
-        timer.invalidate()
-    }
-    
-    @IBAction func stop(_ sender: NSMenuItem) {
+    @IBAction func start_stop(_ sender: NSMenuItem) {
         
-        timer.invalidate()
-        statusItem.title = ("0")
+        count = count + 1
+        
+        if(count%2 == 1) {
+            
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AppDelegate.tick), userInfo: nil, repeats: true)
+        
+        }
+        
+        else {
+            timer.invalidate()
+        }
+    }
+    
+    @IBAction func reset(_ sender: NSMenuItem) {
+        
+        if (ones_sec != 0 || tens_sec != 0 || ones_min != 0 || tens_min != 0 || ones_hour != 0 || tens_hour != 0) {
+            ones_sec = 0
+            tens_sec = 0
+            ones_min = 0
+            tens_min = 0
+            ones_hour = 0
+            tens_hour = 0
+        }
     }
     
     @IBOutlet weak var hourlyPayWindow: NSWindow!
@@ -84,6 +98,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
         
     }
-
+    
+/*  var ratePerSec = 0
+    var earned = 0
+    hourlyRate / 3600 = ratePerSec
+    if (ones_sec += 1) {
+        earned = ratePerSec + ratePerSec
+    }
+*/
 }
 
