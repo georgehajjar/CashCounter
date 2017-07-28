@@ -53,22 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
     }
-    
-    @IBOutlet weak var hourlyPayWindow: NSWindow!
-    
-    @IBAction func hourlyPay(_ sender: NSMenuItem) {
-        
-    }
-    
-    @IBAction func quitApplication(_ sender: NSMenuItem) {
-        NSApplication.shared().terminate(self);
-    }
-    
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.menu = statusMenu
-        statusItem.title = "$$$$"
-    }
-    
+
     func tick() {
         
         ones_sec += 1
@@ -87,7 +72,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             tens_min += 1
             ones_min = 0
         }
-            
+        
         if (tens_min > 5) {
             ones_hour += 1
             tens_min = 0
@@ -97,10 +82,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             tens_hour += 1
             ones_hour = 0
         }
-            
+        
         statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
         
     }
+    
+    @IBOutlet weak var hourlyPayWindow: NSWindow!
+    
+    @IBAction func hourlyPay(_ sender: NSMenuItem) {
+        
+    }
+    
+    @IBAction func quitApplication(_ sender: NSMenuItem) {
+        NSApplication.shared().terminate(self);
+    }
+    
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        statusItem.menu = statusMenu
+        statusItem.title = "$$$$"
+    }
+    
     
 /*  var ratePerSec = 0
     var earned = 0
