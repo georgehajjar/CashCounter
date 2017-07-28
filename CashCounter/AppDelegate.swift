@@ -17,8 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var ones_sec = 0
     var tens_sec = 0
-    var ones_min = 9
-    var tens_min = 5
+    var ones_min = 0
+    var tens_min = 0
     var ones_hour = 0
     var tens_hour = 0
     var timer = Timer()
@@ -41,14 +41,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func reset(_ sender: NSMenuItem) {
         
-        if (ones_sec != 0 || tens_sec != 0 || ones_min != 0 || tens_min != 0 || ones_hour != 0 || tens_hour != 0) {
-            ones_sec = 0
-            tens_sec = 0
-            ones_min = 0
-            tens_min = 0
-            ones_hour = 0
-            tens_hour = 0
-        }
+        count = 0
+        timer.invalidate()
+        
+        ones_sec = 0
+        tens_sec = 0
+        ones_min = 0
+        tens_min = 0
+        ones_hour = 0
+        tens_hour = 0
+        
+        statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
     }
     
     @IBOutlet weak var hourlyPayWindow: NSWindow!
