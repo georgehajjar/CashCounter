@@ -39,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    
     @IBAction func reset(_ sender: NSMenuItem) {
         
         count = 0
@@ -52,6 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         tens_hour = 0
         
         statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
+        time.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
     }
 
     func tick() {
@@ -86,6 +88,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
         
     }
+    
+    @IBOutlet weak var time: NSMenuItem!
+    
     
     @IBOutlet weak var hourlyPayWindow: NSWindow!
     

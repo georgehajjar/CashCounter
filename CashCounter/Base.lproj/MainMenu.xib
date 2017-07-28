@@ -17,11 +17,15 @@
             <connections>
                 <outlet property="hourlyPayWindow" destination="sLs-9e-o96" id="VNG-Qh-tW7"/>
                 <outlet property="statusMenu" destination="eta-3G-QdL" id="gyP-7o-mcK"/>
+                <outlet property="time" destination="pnu-oR-mG3" id="5e7-qs-D7Q"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="eta-3G-QdL">
             <items>
+                <menuItem title="00:00:00" id="pnu-oR-mG3">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem title="Start/Stop" id="ChX-HG-1pQ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -34,6 +38,7 @@
                         <action selector="reset:" target="Voe-Tx-rLC" id="h7P-xY-fJT"/>
                     </connections>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="TfQ-q2-7b5"/>
                 <menuItem title="Hourly Pay" id="B4j-HW-d2P">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
