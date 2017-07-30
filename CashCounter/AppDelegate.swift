@@ -23,6 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var tens_hour = 0
     var timer = Timer()
     var count = 0
+   
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        statusItem.menu = statusMenu
+        statusItem.title = "$$$$"
+    }
     
     @IBAction func start_stop(_ sender: NSMenuItem) {
         
@@ -53,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         tens_hour = 0
         
         statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
-        time.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
+        
     }
 
     func tick() {
@@ -86,6 +91,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
+        time.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
         
     }
     
@@ -102,10 +108,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared().terminate(self);
     }
     
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.menu = statusMenu
-        statusItem.title = "$$$$"
-    }
+
     
     
 /*  var ratePerSec = 0

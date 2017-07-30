@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9F190FA23E57CFAB66C0BDC43670A5FD4D3B6442",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FECACD04F63BD0726747B175F0E6DA1B50C1C6AC" : 9223372036854775807,
+    "9F190FA23E57CFAB66C0BDC43670A5FD4D3B6442" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E013B125-7A5C-4579-9343-E28288C99C6E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FECACD04F63BD0726747B175F0E6DA1B50C1C6AC" : "",
+    "9F190FA23E57CFAB66C0BDC43670A5FD4D3B6442" : "cashcounter\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CashCounter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CashCounter.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:georgehajjar\/cashcounter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9F190FA23E57CFAB66C0BDC43670A5FD4D3B6442"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:georgehajjar\/ourwebsite.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FECACD04F63BD0726747B175F0E6DA1B50C1C6AC"
+    }
+  ]
+}
