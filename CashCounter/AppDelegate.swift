@@ -63,8 +63,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         tens_min = 0
         ones_hour = 0
         tens_hour = 0
+        earned = 0
         
-        statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
+        statusItem.title = String(format: "$%.2f", earned)
+        
+        time.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
         
     }
 
@@ -107,6 +110,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBOutlet weak var hourlyPayWindow: NSWindow!
+
+    
+    
     
     @IBAction func hourlyPay(_ sender: NSMenuItem) {
         
