@@ -23,6 +23,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var tens_hour = 0
     var timer = Timer()
     var count = 0
+    var ratePerHour:Float = 18
+    var ratePerSec:Float = 0
+    var earned:Float = 0
    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.menu = statusMenu
@@ -90,7 +93,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             ones_hour = 0
         }
         
-        statusItem.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
+        ratePerSec = ratePerHour / 3600
+        earned = earned + ratePerSec
+        
+        statusItem.title = String(format: "$%.2f", earned)
+        
         time.title = String(tens_hour) + String(ones_hour) + ":" + String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
         
     }
