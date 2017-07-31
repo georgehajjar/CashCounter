@@ -4,7 +4,9 @@
 //
 //  Created by George Hajjar on 2017-05-20.
 //  Copyright © 2017 George Hajjar. All rights reserved.
-
+//
+//  I got bored at work and decided to see how much money I make.
+//  Start the app at the begining of your work day and at quick glance you can see how much money you've made.
 
 import Cocoa
 
@@ -14,6 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     
     @IBOutlet weak var statusMenu: NSMenu!
+    
+    @IBOutlet weak var time: NSMenuItem!
     
     var ones_sec = 0
     var tens_sec = 0
@@ -29,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.menu = statusMenu
-        statusItem.title = "$$$$"
+        statusItem.title = "$cshcntr$"
     }
     
     @IBAction func start_stop(_ sender: NSMenuItem) {
@@ -102,28 +106,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
-    @IBOutlet weak var time: NSMenuItem!
-    
-    
     @IBOutlet weak var hourlyPayWindow: NSWindow!
     
     @IBAction func hourlyPay(_ sender: NSMenuItem) {
         
     }
     
+    
+    
     @IBAction func quitApplication(_ sender: NSMenuItem) {
         NSApplication.shared().terminate(self);
     }
-    
 
-    
-    
-/*  var ratePerSec = 0
-    var earned = 0
-    hourlyRate / 3600 = ratePerSec
-    if (ones_sec += 1) {
-        earned = ratePerSec + ratePerSec
-    }
-*/
 }
 
