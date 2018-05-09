@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,7 +16,9 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CashCounter" customModuleProvider="target">
             <connections>
                 <outlet property="hourlyPayWindow" destination="sLs-9e-o96" id="VNG-Qh-tW7"/>
+                <outlet property="payBox" destination="9jW-xC-kzw" id="6lc-zs-ovb"/>
                 <outlet property="statusMenu" destination="eta-3G-QdL" id="gyP-7o-mcK"/>
+                <outlet property="submitButton" destination="W2q-LP-aPO" id="0wN-M1-zVi"/>
                 <outlet property="time" destination="pnu-oR-mG3" id="HpF-Sd-5DE"/>
             </connections>
         </customObject>
@@ -42,7 +44,7 @@
                 <menuItem title="Hourly Pay" id="B4j-HW-d2P">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="hourlyPay:" target="Voe-Tx-rLC" id="xto-zK-YV0"/>
+                        <action selector="hourlyPay:" target="Voe-Tx-rLC" id="6bg-Vf-0D0"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" id="WBb-rG-qsU">
@@ -52,28 +54,19 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="-1087" y="-149"/>
+            <point key="canvasLocation" x="-1008" y="-151"/>
         </menu>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="sLs-9e-o96">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="207" width="134" height="64"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="contentRect" x="196" y="207" width="216" height="60"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="pc4-D1-vqx">
-                <rect key="frame" x="0.0" y="0.0" width="134" height="64"/>
+                <rect key="frame" x="0.0" y="0.0" width="216" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1E-FI-x8F">
-                        <rect key="frame" x="20" y="20" width="49" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="RuF-Ra-D3W">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sl-Ae-Bp5">
-                        <rect key="frame" x="82" y="22" width="30" height="17"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sl-Ae-Bp5">
+                        <rect key="frame" x="89" y="20" width="30" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="$/hr" id="0mB-gp-e9e">
                             <font key="font" metaFont="system"/>
@@ -81,9 +74,29 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jW-xC-kzw">
+                        <rect key="frame" x="20" y="18" width="62" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="pXN-Vh-mE0">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2q-LP-aPO">
+                        <rect key="frame" x="119" y="11" width="83" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bN0-O5-zpl">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="submitButton:" target="Voe-Tx-rLC" id="cKC-Pw-rhQ"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1087" y="27"/>
+            <point key="canvasLocation" x="-1008" y="13"/>
         </window>
     </objects>
 </document>
