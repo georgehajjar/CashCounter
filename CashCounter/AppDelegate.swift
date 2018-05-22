@@ -61,6 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func hourlyPay(_ sender: NSMenuItem) {
+        NSApp.activate(ignoringOtherApps: true)
         hourlyPayWindow.orderFront(self)
         hourlyPayWindow.setFrameOrigin(NSPoint(x: 2000 , y: 1200))
         //change manually inputted x and y coordinate values.
